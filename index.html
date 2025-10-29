@@ -58,12 +58,12 @@
       .filter-pill.active {
         background: red;
         transform: scale(1.05);
-        box-shadow: 0 8px 25px -8px rgb(255, 0, 0);
+        box-shadow: 0 8px 25px -8px rgba(220, 38, 38, 0.4);
       }
 
       .filter-pill:not(.active):hover {
-        background: rgba(153, 27, 27, 0.1);
-        border-color: rgb(255, 0, 0);
+        background: rgba(220, 38, 38, 0.1);
+        border-color: rgba(220, 38, 38, 0.3);
         transform: translateY(-2px);
       }
 
@@ -79,7 +79,7 @@
 
       .search-input:focus {
         background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 0 0 4px rgba(153, 27, 27, 0.1);
+        box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
         transform: scale(1.02);
       }
 
@@ -229,42 +229,42 @@
       <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-3 animate-slide-in">
-            <h1 class="text-2xl font-bold text-white">GameLaptop</h1>
+            <h1 class="text-xl sm:text-2xl font-bold text-white">GameLaptop</h1>
           </div>
 
-          <!-- Navigation -->
-          <nav class="hidden md:flex space-x-8">
-            <a
-              href="#home"
-              class="nav-item text-white font-medium hover:text-indigo-200"
-              >Home</a
-            >
-            <a
-              href="#kategori"
-              class="nav-item text-white font-medium hover:text-indigo-200"
-              >Kategori</a
-            >
-            <a
-              href="#produk"
-              class="nav-item text-white font-medium hover:text-indigo-200"
-              >Produk</a
-            >
-            <a
-              href="#tentang"
-              class="nav-item text-white font-medium hover:text-indigo-200"
-              >Tentang</a
-            >
-          </nav>
+          <!-- Right Side: Navigation + Cart + Mobile Menu -->
+          <div class="flex items-center space-x-2 sm:space-x-4 lg:space-x-6">
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-4 lg:space-x-6">
+              <a
+                href="#home"
+                class="nav-item text-white font-medium hover:text-red-200 text-sm lg:text-base"
+                >Home</a
+              >
+              <a
+                href="#kategori"
+                class="nav-item text-white font-medium hover:text-red-200 text-sm lg:text-base"
+                >Kategori</a
+              >
+              <a
+                href="#produk"
+                class="nav-item text-white font-medium hover:text-red-200 text-sm lg:text-base"
+                >Produk</a
+              >
+              <a
+                href="#tentang"
+                class="nav-item text-white font-medium hover:text-red-200 text-sm lg:text-base"
+                >Tentang</a
+              >
+            </nav>
 
-          <!-- Cart and Mobile Menu -->
-          <div class="flex items-center space-x-4">
             <!-- Cart Button -->
             <button
               id="cart-btn"
               class="relative text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
             >
               <svg
-                class="w-6 h-6"
+                class="w-5 h-5 sm:w-6 sm:h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -278,7 +278,7 @@
               </svg>
               <span
                 id="cart-count"
-                class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden"
+                class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center hidden text-xs"
                 >0</span
               >
             </button>
@@ -289,7 +289,7 @@
               class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
             >
               <svg
-                class="w-6 h-6"
+                class="w-5 h-5 sm:w-6 sm:h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -344,20 +344,22 @@
       <div class="absolute inset-0 bg-black/20"></div>
       <div class="container mx-auto px-6 text-center relative z-10 pt-20">
         <div class="animate-fade-in">
-          <h2 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+          <h2
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+          >
             Gaming
             <span class="block text-gradient">Revolution</span>
           </h2>
           <p
-            class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light leading-relaxed"
+            class="text-lg sm:text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light leading-relaxed px-4"
           >
-            Temukan laptop gaming dengan teknologi terbaru dan performa yang tak
+            Temukan laptop gaming dengan teknologi dan performa yang tak
             tertandingi
           </p>
           <div class="flex justify-center">
             <button
               onclick="scrollToProducts()"
-              class="bg-red-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-red-900 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              class="bg-red-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               Jelajahi Koleksi
             </button>
@@ -396,10 +398,12 @@
     >
       <div class="container mx-auto px-6">
         <div class="text-center mb-16 animate-fade-in">
-          <h3 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+          <h3
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 px-4"
+          >
             Temukan <span class="text-gradient">Laptop Impian</span>
           </h3>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Gunakan filter untuk menemukan laptop gaming yang sesuai dengan
             kebutuhan dan budget Anda
           </p>
@@ -431,46 +435,48 @@
         </div>
 
         <!-- Filter Pills -->
-        <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 px-4">
           <button
             onclick="filterProducts('all')"
-            class="filter-pill active text-white px-8 py-3 rounded-2xl font-medium text-lg"
+            class="filter-pill active text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-2xl font-medium text-sm sm:text-base md:text-lg"
           >
             Semua Produk
           </button>
           <button
             onclick="filterProducts('budget')"
-            class="filter-pill bg-white text-gray-700 px-8 py-3 rounded-2xl font-medium text-lg shadow-md"
+            class="filter-pill bg-white text-gray-700 px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-2xl font-medium text-sm sm:text-base md:text-lg shadow-md"
           >
             Budget
           </button>
           <button
             onclick="filterProducts('mid-range')"
-            class="filter-pill bg-white text-gray-700 px-8 py-3 rounded-2xl font-medium text-lg shadow-md"
+            class="filter-pill bg-white text-gray-700 px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-2xl font-medium text-sm sm:text-base md:text-lg shadow-md"
           >
             Mid-Range
           </button>
           <button
             onclick="filterProducts('high-end')"
-            class="filter-pill bg-white text-gray-700 px-8 py-3 rounded-2xl font-medium text-lg shadow-md"
+            class="filter-pill bg-white text-gray-700 px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-2xl font-medium text-sm sm:text-base md:text-lg shadow-md"
           >
             High-End
           </button>
         </div>
 
         <!-- Price Range Indicators -->
-        <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+        <div
+          class="flex flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-500 px-4"
+        >
           <span class="flex items-center gap-2">
             <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-            Budget: < 15 Juta
+            <span class="whitespace-nowrap">Budget: < 15 Juta</span>
           </span>
           <span class="flex items-center gap-2">
             <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
-            Mid-Range: 15-30 Juta
+            <span class="whitespace-nowrap">Mid-Range: 15-30 Juta</span>
           </span>
           <span class="flex items-center gap-2">
             <div class="w-3 h-3 bg-red-400 rounded-full"></div>
-            High-End: > 30 Juta
+            <span class="whitespace-nowrap">High-End: > 30 Juta</span>
           </span>
         </div>
       </div>
@@ -480,10 +486,12 @@
     <section id="produk" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h3 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+          <h3
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 px-4"
+          >
             Koleksi <span class="text-gradient">Premium</span>
           </h3>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Setiap laptop telah dipilih dengan cermat untuk memberikan
             pengalaman gaming terbaik
           </p>
@@ -491,7 +499,7 @@
 
         <div
           id="products-grid"
-          class="stagger-animation grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          class="stagger-animation grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
         >
           <!-- Products will be inserted here by JavaScript -->
         </div>
@@ -520,7 +528,7 @@
           </div>
           <button
             onclick="resetFilters()"
-            class="bg-red-800 text-white px-8 py-3 rounded-2xl font-medium hover:bg-red-900 transition-colors shadow-lg"
+            class="bg-red-600 text-white px-6 sm:px-8 py-3 rounded-2xl font-medium hover:bg-red-700 transition-colors shadow-lg"
           >
             Reset Semua Filter
           </button>
@@ -532,16 +540,18 @@
     <section id="tentang" class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-          <h3 class="text-3xl font-bold mb-8 text-gray-800">
+          <h3 class="text-2xl sm:text-3xl font-bold mb-8 text-gray-800 px-4">
             Tentang GameLaptop Store
           </h3>
-          <p class="text-lg text-gray-600 mb-6">
-            GameLaptop Store adalah toko online terpercaya yang menyediakan
-            laptop gaming berkualitas tinggi dengan harga terbaik. Kami
-            berkomitmen memberikan pengalaman berbelanja yang mudah dan
-            menyenangkan untuk para gamers Indonesia.
+          <p class="text-base sm:text-lg text-gray-600 mb-6 px-4">
+            GameLaptop adalah toko online yang menyediakan laptop gaming
+            berkualitas tinggi dengan harga terbaik. Kami berkomitmen memberikan
+            pengalaman berbelanja yang mudah dan menyenangkan untuk para gamers
+            Indonesia.
           </p>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mt-12 px-4"
+          >
             <div class="text-center">
               <div
                 class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -581,13 +591,17 @@
           <div class="flex items-center justify-center space-x-3 mb-6">
             <span class="text-3xl font-bold">GameLaptop</span>
           </div>
-          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p
+            class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto px-4"
+          >
             Toko laptop gaming terpercaya dengan koleksi terlengkap dan harga
             terbaik di Indonesia
           </p>
 
           <!-- Contact Info -->
-          <div class="flex justify-center space-x-8 mb-8">
+          <div
+            class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-8 px-4"
+          >
             <a
               href="https://wa.me/62895412658358"
               class="flex items-center space-x-3 bg-gray-800 px-6 py-3 rounded-full hover:bg-red-600 transition-colors"
@@ -809,23 +823,23 @@
                             ${categoryLabel}
                         </div>
                     </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900 leading-tight">${
+                    <div class="p-4 sm:p-6 lg:p-8">
+                        <h4 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 text-gray-900 leading-tight">${
                           product.name
                         }</h4>
-                        <div class="price-highlight text-3xl font-bold mb-8">${formatCurrency(
+                        <div class="price-highlight text-xl sm:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8">${formatCurrency(
                           product.price
                         )}</div>
                         
-                        <div class="flex gap-3">
+                        <div class="flex gap-2 sm:gap-3">
                             <button onclick="showDetails(${
                               product.id
-                            })" class="flex-1 bg-gray-100 text-gray-700 py-3 rounded-2xl font-semibold hover:bg-gray-200 transition-colors">
+                            })" class="flex-1 bg-gray-100 text-gray-700 py-2 sm:py-3 rounded-2xl font-semibold text-sm sm:text-base hover:bg-gray-200 transition-colors">
                                 Detail
                             </button>
                             <button onclick="addToCart(${
                               product.id
-                            })" class="flex-1 bg-red-800 text-white py-3 rounded-2xl font-semibold hover:bg-red-900 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            })" class="flex-1 bg-red-600 text-white py-2 sm:py-3 rounded-2xl font-semibold text-sm sm:text-base hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 + Keranjang
                             </button>
                         </div>
@@ -998,7 +1012,7 @@
                             <button onclick="this.closest('.fixed').remove()" class="flex-1 bg-gray-100 text-gray-700 py-3 rounded-2xl font-semibold hover:bg-gray-200 transition-colors">
                                 Lanjut Belanja
                             </button>
-                            <button onclick="this.closest('.fixed').remove(); showCart();" class="flex-1 bg-red-800 text-white py-3 rounded-2xl font-semibold hover:bg-red-900 transition-colors">
+                            <button onclick="this.closest('.fixed').remove(); showCart();" class="flex-1 bg-red-600 text-white py-3 rounded-2xl font-semibold hover:bg-red-700 transition-colors">
                                 Lihat Keranjang
                             </button>
                         </div>
@@ -1049,7 +1063,7 @@
                                 }</span>
                                 <button onclick="updateQuantity(${item.id}, ${
               item.quantity + 1
-            })" class="w-8 h-8 bg-red-800 text-white rounded-full flex items-center justify-center hover:bg-red-900 transition-colors">
+            })" class="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition-colors">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                                     </svg>
@@ -1092,7 +1106,7 @@
                                 </svg>
                                 <div class="text-gray-500 text-xl font-medium mb-2">Keranjang Kosong</div>
                                 <p class="text-gray-400 mb-6">Belum ada produk yang ditambahkan</p>
-                                <button onclick="this.closest('.fixed').remove(); scrollToProducts();" class="bg-red-800 text-white px-8 py-3 rounded-2xl font-medium hover:bg-red-900 transition-colors">
+                                <button onclick="this.closest('.fixed').remove(); scrollToProducts();" class="bg-red-600 text-white px-8 py-3 rounded-2xl font-medium hover:bg-red-700 transition-colors">
                                     Mulai Belanja
                                 </button>
                             </div>
@@ -1109,7 +1123,7 @@
                                 </div>
                                 
                                 <div class="space-y-3">
-                                    <button onclick="checkout()" class="w-full bg-red-800 text-white py-4 rounded-2xl font-semibold text-lg hover:bg-red-900 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                    <button onclick="checkout()" class="w-full bg-red-600 text-white py-4 rounded-2xl font-semibold text-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                                         Checkout
                                     </button>
                                     <button onclick="clearCart()" class="w-full bg-gray-100 text-gray-700 py-3 rounded-2xl font-medium hover:bg-gray-200 transition-colors">
@@ -1148,7 +1162,7 @@
                                 </svg>
                             </div>
                             <h3 class="text-3xl font-bold text-gray-900 mb-2">Demo Checkout</h3>
-                            <p class="text-gray-600 text-lg">Ini adalah demo checkout.</p>
+                            <p class="text-gray-600 text-lg">Ini hanya demo checkout.</p>
                         </div>
                         
                         <div class="bg-gray-50 rounded-2xl p-6 mb-8">
@@ -1214,7 +1228,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-8">Pesanan Berhasil</h3>
                         
-                        <button onclick="this.closest('.fixed').remove()" class="w-full bg-red-800 text-white py-3 rounded-2xl font-semibold hover:bg-red-900 transition-colors">
+                        <button onclick="this.closest('.fixed').remove()" class="w-full bg-red-600 text-white py-3 rounded-2xl font-semibold hover:bg-red-700 transition-colors">
                             Tutup
                         </button>
                     </div>
@@ -1353,7 +1367,7 @@
                             </button>
                             <button onclick="addToCart(${
                               product.id
-                            }); this.closest('.fixed').remove();" class="bg-red-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-red-900 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            }); this.closest('.fixed').remove();" class="bg-red-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                                 Tambah ke Keranjang
                             </button>
                         </div>
@@ -1428,6 +1442,7 @@
       // Dynamic header background
       function setupDynamicHeader() {
         const header = document.querySelector("header");
+        const mobileMenu = document.getElementById("mobile-menu");
 
         window.addEventListener("scroll", () => {
           if (window.scrollY > 100) {
@@ -1437,6 +1452,14 @@
             header.querySelectorAll(".nav-item").forEach((item) => {
               item.style.color = "#1f2937";
             });
+            // Update mobile menu background and text
+            if (mobileMenu) {
+              mobileMenu.style.background = "rgba(255, 255, 255, 0.95)";
+              mobileMenu.style.backdropFilter = "blur(20px)";
+              mobileMenu.querySelectorAll("a").forEach((link) => {
+                link.style.color = "#1f2937";
+              });
+            }
             // Update cart button color
             const cartBtn = document.getElementById("cart-btn");
             if (cartBtn) {
@@ -1454,6 +1477,14 @@
             header.querySelectorAll(".nav-item").forEach((item) => {
               item.style.color = "#ffffff";
             });
+            // Update mobile menu background and text
+            if (mobileMenu) {
+              mobileMenu.style.background = "rgba(255, 255, 255, 0.1)";
+              mobileMenu.style.backdropFilter = "blur(20px)";
+              mobileMenu.querySelectorAll("a").forEach((link) => {
+                link.style.color = "#ffffff";
+              });
+            }
             // Update cart button color
             const cartBtn = document.getElementById("cart-btn");
             if (cartBtn) {
@@ -1501,7 +1532,7 @@
           if (b) {
             var d = b.createElement("script");
             d.innerHTML =
-              "window.__CF$cv$params={r:'9953b609e58ab29b',t:'MTc2MTU4NDAyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+              "window.__CF$cv$params={r:'9963e60b33694ac8',t:'MTc2MTc1Mzc2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
             b.getElementsByTagName("head")[0].appendChild(d);
           }
         }
